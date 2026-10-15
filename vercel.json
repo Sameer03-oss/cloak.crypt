@@ -1,6 +1,11 @@
 {
-  "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm --filter @workspace/vaultline run build",
+  "buildCommand": "pnpm --filter @workspace/vaultline run build && pnpm --filter @workspace/api-server run build",
   "outputDirectory": "artifacts/vaultline/dist/public",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "devCommand": "pnpm --filter @workspace/vaultline run dev",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
