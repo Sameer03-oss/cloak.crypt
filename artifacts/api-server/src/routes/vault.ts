@@ -1,7 +1,7 @@
-import { Router, type IRouter, type RequestHandler } from "express";
+import { Router, type IRouter, type RequestHandler, type Request, type Response } from "express";
 import { getAuth } from "@clerk/express";
 import { ObjectId } from "mongodb";
-import { getMongoDb } from "../lib/mongo";
+import { getMongoDb } from "../lib/mongo.ts";
 
 type VaultPayload = {
   version: 1;
@@ -32,7 +32,7 @@ type VaultDocument = VaultItemInput & {
 
 const router: IRouter = Router();
 
-const requireAuth: RequestHandler = (req, res, next) => {
+const requireAuth: RequestHandler = (req: Request, res: Response, next: Function) => {
   const auth = getAuth(req);
   const userId = auth.userId;
   if (!userId) {
@@ -59,7 +59,7 @@ function isPayload(value: unknown): value is VaultPayload {
   );
 }
 
-router.get("/vault/items", requireAuth, async (req, res) => {
+router.get("/vault/items", requireAuth, async (req: Request, res: Response) => {
   try {
     const db = await getMongoDb();
     const items = await db
@@ -88,7 +88,7 @@ router.get("/vault/items", requireAuth, async (req, res) => {
   }
 });
 
-router.get("/vault/items/:id", requireAuth, async (req, res) => {
+router.get("/vault/items/:id", requireAuth, async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
     if (typeof id !== "string" || !ObjectId.isValid(id)) {
@@ -121,7 +121,7 @@ router.get("/vault/items/:id", requireAuth, async (req, res) => {
   }
 });
 
-router.post("/vault/items", requireAuth, async (req, res) => {
+router.post("/vault/items", requireAuth, async (req: Request, res: Response) => {
   const input = req.body as Partial<VaultItemInput>;
   if (
     typeof input.name !== "string" ||
@@ -169,7 +169,7 @@ router.post("/vault/items", requireAuth, async (req, res) => {
   }
 });
 
-router.delete("/vault/items/:id", requireAuth, async (req, res) => {
+router.delete("/vault/items/:id", requireAuth, async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
     if (typeof id !== "string" || !ObjectId.isValid(id)) {

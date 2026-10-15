@@ -1,5 +1,5 @@
 import type { IncomingHttpHeaders } from "http";
-import type { RequestHandler } from "express";
+import type { Request, Response, RequestHandler } from "express";
 import { createProxyMiddleware } from "http-proxy-middleware";
 
 const CLERK_FAPI = "https://frontend-api.clerk.dev";
@@ -31,7 +31,7 @@ export function clerkProxyMiddleware(): RequestHandler {
     pathRewrite: (path: string) =>
       path.replace(new RegExp(`^${CLERK_PROXY_PATH}`), ""),
     on: {
-      proxyReq: (proxyReq, req) => {
+      proxyReq: (proxyReq, req: Request) => {
         const protocol = req.headers["x-forwarded-proto"] || "https";
         const host = getClerkProxyHost(req) || "";
         proxyReq.setHeader(
@@ -47,7 +47,7 @@ export function clerkProxyMiddleware(): RequestHandler {
           "";
         if (clientIp) proxyReq.setHeader("X-Forwarded-For", clientIp);
       },
-      proxyRes: (proxyRes, req, res) => {
+      proxyRes: (proxyRes, req: Request, res: Response) => {
         const headers = { ...proxyRes.headers };
         delete headers["transfer-encoding"];
         delete headers["connection"];

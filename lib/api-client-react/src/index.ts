@@ -1,4 +1,4 @@
-export * from "./generated/api";
-export * from "./generated/api.schemas";
-export { setBaseUrl, setAuthTokenGetter } from "./custom-fetch";
-export type { AuthTokenGetter } from "./custom-fetch";
+export * from "./generated/api.ts";
+export * from "./generated/api.schemas.ts";
+export { setBaseUrl, setAuthTokenGetter } from "./custom-fetch.ts";
+export type { AuthTokenGetter } from "./custom-fetch.ts";
