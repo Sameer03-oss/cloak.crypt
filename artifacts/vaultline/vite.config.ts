@@ -12,6 +12,7 @@ export default defineConfig(async ({ mode }) => {
   const rawPort = process.env.PORT ?? fileEnv.PORT ?? '5173';
 
   const port = Number(rawPort);
+  const apiPort = process.env.API_PORT ?? fileEnv.API_PORT ?? '8080';
 
   if (!Number.isInteger(port) || port <= 0 || port > 65535) {
     throw new Error(`Invalid PORT value: "${rawPort}"`);
@@ -62,6 +63,12 @@ export default defineConfig(async ({ mode }) => {
       strictPort: true,
       host: '0.0.0.0',
       allowedHosts: true,
+      proxy: {
+        '/api': {
+          target: `http://127.0.0.1:${apiPort}`,
+          changeOrigin: true,
+        },
+      },
       fs: {
         strict: true,
       },
@@ -70,6 +77,12 @@ export default defineConfig(async ({ mode }) => {
       port,
       host: '0.0.0.0',
       allowedHosts: true,
+      proxy: {
+        '/api': {
+          target: `http://127.0.0.1:${apiPort}`,
+          changeOrigin: true,
+        },
+      },
     },
   };
 });
