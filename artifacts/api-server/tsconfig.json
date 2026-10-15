@@ -5,7 +5,10 @@
     "tsBuildInfoFile": ".tsbuildinfo",
     "outDir": "dist",
     "rootDir": "src",
-    "types": ["node"]
+    "types": ["node"],
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": false
   },
   "include": ["src"],
   "references": [
