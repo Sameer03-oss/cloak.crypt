@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Vaultline Secure Data Platform"
+description = "An advanced client-side secure messaging and developer toolkit with AES-256 encryption, portable HTML containers, multilingual code examples, and a polished product experience."
+version = "1.0.0"
+id = "artifacts/vaultline"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24945
+
+[services.development]
+run = "pnpm --filter @workspace/vaultline run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/vaultline", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/vaultline/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24945"
+BASE_PATH = "/"

@@ -1,0 +1,115 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "Ud1N4jQhAV-GNRUVQTesA"
+uri = "file://.local/conversation-workspace/files/attached_assets/MINI_PROJECT_1789834606663.html"
+type = "html"
+title = "Vaultline — Download Fixed"
+description = "Updated self-contained security UI with automatic Blob download and a browser-safe fallback download link."
+logical_id = "f26621a2-860f-4cd9-9d93-35cdc07e10a7"
+content_hash = "sha256:293d2cec44b557f861ee07002f98bf4d7160a251336f48dd018e013708d9cd17"
+size = 34909
+mtime_ms = 1789835065984
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/conversation:0113dda3-4a34-4f04-b568-3798c2b237c1/f26621a2-860f-4cd9-9d93-35cdc07e10a7/1e711626-5b08-4c67-b779-a4c6983e0749"
+storage_version_token = "1789835076030309"
+content_type = "text/html"
+source_uri = "file://attached_assets/MINI_PROJECT_1789834606663.html"
+
+[[outputs]]
+id = "MiqIIxOFZYT5PQ4npV2DZ"
+uri = "file://blueprints/vaultline-project-blueprint.pdf"
+type = "pdf"
+title = "Vaultline Project Blueprint PDF"
+description = "Print-ready blueprint covering product vision, routes, user journeys, crypto protocol, architecture, UI system, six-language docs surface, frontend structure, roadmap, and success criteria."
+logical_id = "2dee0f3c-c0e9-410b-93d1-33b8eb7756ee"
+content_hash = "sha256:4eabc3a1d6b814337bdcfdc3d9ff902710a6faf4cd2f29e168e9a44b7c9fa567"
+size = 164736
+mtime_ms = 1789844551831
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:aa212759-2770-4e33-91ce-a7d1b62ca7a0/2dee0f3c-c0e9-410b-93d1-33b8eb7756ee/5d5a6275-a11b-4688-9ec3-9cab05aba010"
+storage_version_token = "1789844568664706"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "aLzjuk55gYBPrFmq-GbxQ"
+uri = "file://blueprints/vaultline-project-blueprint.md"
+type = "text"
+title = "Vaultline — Blueprint Markdown Source"
+description = "Editable Markdown source with the aligned product architecture, crypto model, routes, roadmap, and security scope."
+logical_id = "cd7bbbb1-bba3-44ab-95eb-eafb69a9e103"
+content_hash = "sha256:abd89005ab0bd12853e70d1400a3fb683a7b7bd4504ba6459d661708f6753290"
+size = 13337
+mtime_ms = 1789844509216
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:aa212759-2770-4e33-91ce-a7d1b62ca7a0/cd7bbbb1-bba3-44ab-95eb-eafb69a9e103/d8eb0185-832e-4016-82ff-467ee3191a78"
+storage_version_token = "1789845192144981"
+content_type = "text/markdown"
+
+[[outputs]]
+id = "3xyw0V_5XzJ51GWENxVeT"
+uri = "file://blueprints/vaultline-project-blueprint.html"
+type = "html"
+title = "Vaultline Blueprint — Self-contained HTML"
+description = "Standalone styled HTML version of the project blueprint."
+logical_id = "6e03430b-18d3-4f78-941f-4cb9b37e0a8f"
+content_hash = "sha256:25877f45fdeba7ed8605966f0af2a4d1f72804e0d625ccb192417cf9bade97cc"
+size = 19168
+mtime_ms = 1789844540011
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:aa212759-2770-4e33-91ce-a7d1b62ca7a0/6e03430b-18d3-4f78-941f-4cb9b37e0a8f/a567c802-a3d4-49dc-8d3a-2874a9c2c53a"
+storage_version_token = "1789844571295606"
+content_type = "text/html"
+
+[[outputs]]
+id = "Howth5zlOomhxJLJSHSAM"
+uri = "file://blueprints/vaultline-corrected-blueprint.pdf"
+type = "pdf"
+title = "Vaultline — Corrected Blueprint PDF"
+description = "Implementation-aligned eight-page blueprint for the Vaultline project."
+logical_id = "1d3aeaee-576c-49a9-9ed4-8a0a21e48e89"
+content_hash = "sha256:cb02bc32804941e00cc09f99258ba2767d8affb9929619bdf39b5ef238a5bed4"
+size = 138323
+mtime_ms = 1789845176607
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:aa212759-2770-4e33-91ce-a7d1b62ca7a0/1d3aeaee-576c-49a9-9ed4-8a0a21e48e89/caef1d6a-9330-4756-be91-b03db5ddc844"
+storage_version_token = "1789845189510165"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "mXaExRORk_nMzbjR2DPBx"
+uri = "file://blueprints/vaultline-corrected-blueprint.html"
+type = "html"
+title = "Vaultline — Corrected Blueprint HTML"
+description = "Editable self-contained HTML version of the corrected blueprint."
+logical_id = "e43f351a-8bfb-42f1-b474-f78ff43fd8d1"
+content_hash = "sha256:878a37e2c911a9a5284644a5b649ba6c4ef630f66549383bd60ee637379ba9d6"
+size = 18812
+mtime_ms = 1789845166259
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:aa212759-2770-4e33-91ce-a7d1b62ca7a0/e43f351a-8bfb-42f1-b474-f78ff43fd8d1/6d223565-9c1f-445c-af06-98c69b29b772"
+storage_version_token = "1789845190854295"
+content_type = "text/html"
+
+[[outputs]]
+id = "0PzPx33zYPhwIHpH2QxRy"
+uri = "file://blueprints/vaultline-blueprint-corrections-marked.pdf"
+type = "pdf"
+title = "Vaultline — Original Blueprint with Corrections"
+description = "Your original eight-slide blueprint with the main corrections pointed out directly on each relevant slide."
+logical_id = "33fcc887-bcbb-4b07-9226-d2581804603c"
+content_hash = "sha256:f107f0155dd6358641cae5305d810d59692f06f1ad14b6c278db2c3640277819"
+size = 296318
+mtime_ms = 1789927340674
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:aa212759-2770-4e33-91ce-a7d1b62ca7a0/33fcc887-bcbb-4b07-9226-d2581804603c/345d03e4-1b1a-4cd7-b1d8-0604b61b267a"
+storage_version_token = "1789927367970247"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "uAVKvVE5OVTLgHwIhvANb"
+uri = "file://blueprints/vaultline-blueprint-easy-language.pdf"
+type = "pdf"
+title = "Vaultline — Blueprint in Easy Language"
+description = "Your original eight-slide blueprint with the main corrections explained in simple language."
+logical_id = "6dab89e8-ceed-4cce-b793-24793eb4c9e1"
+content_hash = "sha256:999339e6af82a498053a3bf2c3b35d73e39ea9e811df372538e864cae3db2282"
+size = 296061
+mtime_ms = 1789927717298
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:aa212759-2770-4e33-91ce-a7d1b62ca7a0/6dab89e8-ceed-4cce-b793-24793eb4c9e1/8ad0467b-6be8-40d0-89a3-e76f3301e263"
+storage_version_token = "1789927731253529"
+content_type = "application/pdf"

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-labelledby="title desc">
+  <title id="title">Cloak Crypt</title>
+  <desc id="desc">A teal shield with a C and the words Cloak Crypt</desc>
+  <rect width="320" height="96" rx="24" fill="#102426"/>
+  <path d="M48 17 73 27v20c0 16-10 27-25 34C33 74 23 63 23 47V27l25-10Z" fill="#52d7ca"/>
+  <path d="M56 34c-3-3-7-4-11-4-9 0-15 7-15 17s6 17 15 17c4 0 8-1 11-4l-5-6c-2 2-4 3-6 3-5 0-8-4-8-10s3-10 8-10c2 0 4 1 6 3l5-6Z" fill="#102426"/>
+  <text x="92" y="58" fill="#f7f2e9" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1">CLOAK CRYPT</text>
+</svg>

@@ -1,0 +1,1 @@
+- [PDF annotation fonts](pdf-annotation-fonts.md) — use ASCII punctuation with PyMuPDF built-in fonts unless a Unicode font is embedded.
