@@ -90,7 +90,8 @@ router.get("/vault/items", requireAuth, async (req, res) => {
 
 router.get("/vault/items/:id", requireAuth, async (req, res) => {
   try {
-    if (!ObjectId.isValid(req.params.id)) {
+    const id = req.params.id;
+    if (typeof id !== "string" || !ObjectId.isValid(id)) {
       res.status(400).json({ error: "Invalid vault item id." });
       return;
     }
@@ -98,7 +99,7 @@ router.get("/vault/items/:id", requireAuth, async (req, res) => {
     const db = await getMongoDb();
     const item = await db
       .collection<VaultDocument>("vault_items")
-      .findOne({ _id: new ObjectId(req.params.id), userId: res.locals.userId });
+      .findOne({ _id: new ObjectId(id), userId: res.locals.userId });
 
     if (!item) {
       res.status(404).json({ error: "Vault item not found." });
@@ -170,14 +171,15 @@ router.post("/vault/items", requireAuth, async (req, res) => {
 
 router.delete("/vault/items/:id", requireAuth, async (req, res) => {
   try {
-    if (!ObjectId.isValid(req.params.id)) {
+    const id = req.params.id;
+    if (typeof id !== "string" || !ObjectId.isValid(id)) {
       res.status(400).json({ error: "Invalid vault item id." });
       return;
     }
     const db = await getMongoDb();
     const result = await db
       .collection<VaultDocument>("vault_items")
-      .deleteOne({ _id: new ObjectId(req.params.id), userId: res.locals.userId });
+      .deleteOne({ _id: new ObjectId(id), userId: res.locals.userId });
     if (result.deletedCount === 0) {
       res.status(404).json({ error: "Vault item not found." });
       return;

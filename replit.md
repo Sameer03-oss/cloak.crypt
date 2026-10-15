@@ -1,15 +1,31 @@
-# [Project name]
+# Vaultline Secure Data Platform
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Vaultline encrypts text and images in the browser and stores encrypted vault history behind Clerk authentication.
 
 ## Run & Operate
 
+- `pnpm install --frozen-lockfile` — install workspace dependencies
+- Start the `artifacts/vaultline: web` workflow for the frontend preview
+- Start the `artifacts/api-server: API Server` workflow for vault history and authentication
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- Local environment values are listed in `.env.example`; `.env` is ignored by Git.
+- Required app values: `VITE_CLERK_PUBLISHABLE_KEY`, `CLERK_PUBLISHABLE_KEY`,
+  `CLERK_SECRET_KEY`, and `MONGODB_URI`; `DB_NAME` defaults to `AARYAN`.
+- For Replit, add credentials with the Secrets tool. For Vercel, add the same
+  values under Project Settings → Environment Variables.
+
+## Vercel
+
+- Import the repository with the repository root as the Vercel Root Directory.
+- `vercel.json` builds the Vaultline static frontend and routes API requests to
+  the Express function in `api/[...path].ts`; other paths use the SPA entry.
+- Configure `VITE_CLERK_PUBLISHABLE_KEY`, `CLERK_PUBLISHABLE_KEY`,
+  `CLERK_SECRET_KEY`, and `MONGODB_URI` in Vercel. Set both publishable-key
+  variables to the same Clerk publishable key.
 
 ## Stack
 

@@ -1,0 +1,6 @@
+{
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm --filter @workspace/vaultline run build",
+  "outputDirectory": "artifacts/vaultline/dist/public",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
