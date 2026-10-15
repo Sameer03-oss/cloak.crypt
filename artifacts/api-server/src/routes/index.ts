@@ -1,6 +1,6 @@
 import { Router, type IRouter } from "express";
-import healthRouter from "./health.ts";
-import vaultRouter from "./vault.ts";
+import healthRouter from "./health";
+import vaultRouter from "./vault";
 
 const router: IRouter = Router();
 

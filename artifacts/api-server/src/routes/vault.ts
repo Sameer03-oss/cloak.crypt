@@ -1,7 +1,16 @@
 import { Router, type IRouter, type RequestHandler, type Request, type Response } from "express";
 import { getAuth } from "@clerk/express";
 import { ObjectId } from "mongodb";
-import { getMongoDb } from "../lib/mongo.ts";
+import { getMongoDb } from "../lib/mongo";
+import type { Logger } from "pino";
+
+declare global {
+  namespace Express {
+    interface Request {
+      log: Logger;
+    }
+  }
+}
 
 type VaultPayload = {
   version: 1;
